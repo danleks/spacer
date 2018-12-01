@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="search">
     <p>spacer</p>
   </div>
 </template>
@@ -7,6 +7,6 @@
 <script>
 
 export default {
-  name: 'Home',
+  name: 'Search',
 };
 </script>
