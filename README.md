@@ -1,5 +1,7 @@
 # spacer
 
+This app uses NASA image API to fetch images and display them after passing search queary
+
 ## Project setup
 ```
 npm install
@@ -24,3 +26,4 @@ npm run lint
 ```
 npm run test:unit
 ```
+
