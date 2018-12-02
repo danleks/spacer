@@ -3,7 +3,7 @@
     <div class="wrapper">
       <HeroImage />
       <Claim />
-      <SearchInput />
+      <SearchInput v-model="searchQuery" @input="handleInput" />
   </div>
   </div>
 </template>
@@ -65,6 +65,8 @@ export default {
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
   }
 
@@ -76,6 +78,7 @@ export default {
     padding: 30px;
     width: 100%;
     height: 100vh;
+    color: #fff;
 
   };
 </style>
