@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="wrapper">
+    <div :class="[{flexStart: step === 1}, 'wrapper']">
       <HeroImage v-if="step === 0"/>
       <Claim v-if="step === 0"/>
       <SearchInput v-model="searchQuery" @input="handleInput" :dark = "step === 1"/>
@@ -38,10 +38,12 @@ export default {
   methods: {
     // eslint-disable-next-line
     handleInput: debounce(function () {
+      this.loading = true;
       axios.get(`${API}${this.searchQuery}&media_type=image`)
         .then((response) => {
           console.log(response.data.collection.items);
           this.result = response.data.collection.items;
+          this.step = 1;
         })
 
         .catch((error) => {
@@ -82,5 +84,10 @@ export default {
     height: 100vh;
     color: #fff;
 
+    &.flexStart {
+      justify-content: flex-start;
+    }
   };
+
+
 </style>

@@ -60,11 +60,16 @@ export default {
             outline: none;
             box-shadow: 0 15px 25px -8px rgba(255, 255, 256, .2);
         }
-      }
 
-      .dark {
+        &.dark {
           color: #0b110a;
           border-bottom: 1px solid #0b110a;
+        }
+
+        &.dark:focus {
+            outline: none;
+            box-shadow: 0 15px 25px -8px rgba(255, 255, 256, .2);
+        }
       }
     };
 </style>
