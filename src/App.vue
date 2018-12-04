@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <HeroImage />
-      <Claim />
-      <SearchInput v-model="searchQuery" @input="handleInput" />
+      <HeroImage v-if="step === 0"/>
+      <Claim v-if="step === 0"/>
+      <SearchInput v-model="searchQuery" @input="handleInput" :dark = "step === 1"/>
   </div>
   </div>
 </template>
@@ -24,6 +24,8 @@ export default {
     return {
       searchQuery: '',
       result: [],
+      loading: false,
+      step: 0
     };
   },
 
