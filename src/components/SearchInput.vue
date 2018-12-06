@@ -38,6 +38,7 @@ export default {
       display: flex;
       flex-direction: column;
       width: 250px;
+      margin-bottom: 100px;
 
       input {
         height: 30px;
