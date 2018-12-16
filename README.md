@@ -1,6 +1,7 @@
 # spacer
 
-This app uses NASA image API to fetch images and display them after passing search queary
+This app uses NASA image API to fetch images and display them after passing search queary.
+Created with help of hello roman vue tutorial. 
 
 ## Project setup
 ```
